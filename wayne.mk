@@ -37,7 +37,7 @@ TARGET_SCREEN_WIDTH := 1080
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(COMMON_PATH)/overlay \
-    $(COMMON_PATH)/overlay-lineage
+    $(COMMON_PATH)/overlay-mk
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -303,7 +303,7 @@ PRODUCT_PACKAGES += \
 
 # LiveDisplay native
 PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay@1.0-service-sdm
+    vendor.mokee.livedisplay@1.0-service-sdm
 
 # Media
 PRODUCT_COPY_FILES += \
