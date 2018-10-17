@@ -37,7 +37,7 @@ TARGET_SCREEN_WIDTH := 1080
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(COMMON_PATH)/overlay \
-    $(COMMON_PATH)/overlay-mk
+    $(COMMON_PATH)/overlay-mokee
 
 # Permissions
 PRODUCT_COPY_FILES += \
