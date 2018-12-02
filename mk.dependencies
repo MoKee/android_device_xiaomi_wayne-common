@@ -1,6 +1,6 @@
 [
   {
-    "repository":  "android_vendor_xiaomi_wayne-comnon",
+    "repository":  "android_vendor_xiaomi_wayne-common",
     "target_path": "vendor/xiaomi/wayne-common"
   },
   {
