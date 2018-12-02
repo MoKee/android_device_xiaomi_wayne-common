@@ -89,6 +89,9 @@ vendor.vidc.enc.disable_bframes=1
 vidc.enc.dcvs.extra-buff-count=2
 vidc.enc.target_support_bframe=1
 
+# Mokee
+ro.mk.maintainer=IsaacChen
+
 # QCOM
 persist.cne.feature=1
 persist.dpm.feature=1
