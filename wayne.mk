@@ -21,6 +21,9 @@
 # definition file).
 #
 
+# Maintainer
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.mk.maintainer=Pig
 
 WAYNE_PATH := device/xiaomi/wayne-common
 
