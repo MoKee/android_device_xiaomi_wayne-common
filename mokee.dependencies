@@ -1,7 +1,27 @@
 [
   {
-    "repository": "android_kernel_xiaomi_sdm660",
+    "repository": "android_device_xiaomi_sdm660-common",
+    "target_path": "device/xiaomi/sdm660-common"
+  },
+  {
+    "repository": "android_vendor_xiaomi_jasmine_sprout",
+    "target_path": "vendor/xiaomi/jasmine_sprout"
+  },
+  {
+    "repository": "android_vendor_xiaomi_wayne",
+    "target_path": "vendor/xiaomi/wayne"
+  },
+  {
+    "repository": "android_kernel_xiaomi_wayne",
     "target_path": "kernel/xiaomi/sdm660"
+  },
+  {
+    "repository": "android_vendor_xiaomi_wayne-common",
+    "target_path": "vendor/xiaomi/wayne-common"
+  },
+  {
+    "repository": "android_vendor_xiaomi_sdm660-common",
+    "target_path": "vendor/xiaomi/sdm660-common"
   },
   {
     "repository": "android_packages_resources_devicesettings",
