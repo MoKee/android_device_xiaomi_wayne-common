@@ -25,13 +25,17 @@
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.mk.maintainer=Pig
 
+WAYNE_PATH := device/xiaomi/wayne-common
+
+# Overlays
+DEVICE_PACKAGE_OVERLAYS += \
+    $(WAYNE_PATH)/overlay
+
 # Inherit from sdm660-common
 $(call inherit-product, device/xiaomi/sdm660-common/sdm660.mk)
 
 # Inherit proprietary files
 $(call inherit-product, vendor/xiaomi/wayne-common/wayne-common-vendor.mk)
-
-WAYNE_PATH := device/xiaomi/wayne-common
 
 # Audio
 PRODUCT_COPY_FILES += \
