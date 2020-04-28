@@ -21,32 +21,41 @@
 # definition file).
 #
 
-# Maintainer
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.mk.maintainer=Pig
-
-WAYNE_PATH := device/xiaomi/wayne-common
-
-# Overlays
-DEVICE_PACKAGE_OVERLAYS += \
-    $(WAYNE_PATH)/overlay
-
 # Inherit from sdm660-common
 $(call inherit-product, device/xiaomi/sdm660-common/sdm660.mk)
 
-# Inherit proprietary files
-$(call inherit-product, vendor/xiaomi/wayne-common/wayne-common-vendor.mk)
+# Inherit properties
+$(call inherit-product, $(LOCAL_PATH)/properties.mk)
+
+# Overlays
+DEVICE_PACKAGE_OVERLAYS += \
+    $(LOCAL_PATH)/overlay \
+    $(LOCAL_PATH)/overlay-mokee
+
+PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
+    $(LOCAL_PATH)/overlay-mokee/mokee-sdk
 
 # Audio
 PRODUCT_COPY_FILES += \
-    $(WAYNE_PATH)/audio/audio_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info_intcodec.xml \
-    $(WAYNE_PATH)/audio/mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths.xml \
-    $(WAYNE_PATH)/audio/sound_trigger_mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sound_trigger_mixer_paths.xml \
-    $(WAYNE_PATH)/audio/sound_trigger_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sound_trigger_platform_info.xml
+    $(LOCAL_PATH)/audio/audio_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info_intcodec.xml \
+    $(LOCAL_PATH)/audio/mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths.xml \
+    $(LOCAL_PATH)/audio/sound_trigger_mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sound_trigger_mixer_paths.xml \
+    $(LOCAL_PATH)/audio/sound_trigger_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sound_trigger_platform_info.xml
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2160
 TARGET_SCREEN_WIDTH := 1080
 
-# Inherit proprietary files
-$(call inherit-product-if-exists, vendor/xiaomi/wayne-common/wayne-common-vendor.mk)
+# Haters gonna hate..
+PRODUCT_CHARACTERISTICS := nosdcard
+
+# Init
+PRODUCT_PACKAGES += \
+    init.device.rc
+
+# USB
+PRODUCT_PACKAGES += \
+    android.hardware.usb@1.0-service
+
+# Inherit the proprietary files
+$(call inherit-product, vendor/xiaomi/wayne-common/wayne-common-vendor.mk)

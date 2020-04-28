@@ -22,9 +22,5 @@
   {
     "repository": "android_vendor_xiaomi_sdm660-common",
     "target_path": "vendor/xiaomi/sdm660-common"
-  },
-  {
-    "repository": "android_packages_resources_devicesettings",
-    "target_path": "packages/resources/devicesettings"
   }
 ]

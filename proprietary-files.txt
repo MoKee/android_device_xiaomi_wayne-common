@@ -48,15 +48,15 @@ vendor/lib/libarcsoft_dualcam_refocus_rear_t.so
 vendor/lib/libarcsoft_dualcam_refocus_rear_w.so
 vendor/lib/libarcsoft_dualcam_refocus.so
 vendor/lib/libarcsoft_high_dynamic_range.so
-vendor/lib/libcdsprpc.so
 vendor/lib/libdepthmapwrapper.so
 vendor/lib/libflash_pmic.so
+vendor/lib/libft2vendor.so
 vendor/lib/libhal_dbg.so
-vendor/lib/libhdr_tm.so
 vendor/lib/libjpegdhw.so
 vendor/lib/libjpegdmahw.so
 vendor/lib/libjpegehw.so
 vendor/lib/libmibokeh_660.so
+vendor/lib/libMiWatermark.so
 vendor/lib/libmm-qcamera.so
 vendor/lib/libmmlib2d_interface.so
 vendor/lib/libmmcamera_dbg.so
@@ -112,8 +112,6 @@ vendor/lib/libvidhance.so
 vendor/lib/libvidhance_gyro.so
 vendor/lib/libXMFD_AgeGender.so
 vendor/lib/mibokeh_660_opencl.bin
-vendor/lib64/libcdsprpc.so
-vendor/lib64/libhdr_tm.so
 vendor/lib64/libmmcamera2_frame_algorithm.so
 vendor/lib64/libmmcamera2_is.so
 vendor/lib64/libmmcamera2_q3a_core.so
@@ -733,18 +731,78 @@ vendor/lib/libmmcamera_isp_sce40.so
 vendor/lib/libmmcamera_isp_snr47.so
 vendor/lib/libmmcamera_isp_sub_module.so
 
-# Display Calibration - from jasmine
-vendor/etc/qdcm_calib_data_tianma_nt36672_fhd_video_mode_dsi_panel.xml
-vendor/etc/qdcm_calib_data_jdi_nt36672_fhd_video_mode_dsi_panel.xml
+# Consumerir - from jasmine
+vendor/lib64/hw/consumerir.default.so:vendor/lib64/hw/consumerir.sdm660.so
 
-# Gatekeeper
+# Display Calibration - from jasmine V9.6.17.0.ODIMIFE
+vendor/etc/qdcm_calib_data_tianma_nt36672_fhd_video_mode_dsi_panel.xml|e6632fbcb6af3082c4cd17afe26a4aab1e63c6ed
+vendor/etc/qdcm_calib_data_jdi_nt36672_fhd_video_mode_dsi_panel.xml|b3ebd0fcd2ed93e621b9a5c13a76ffca7b2c232d
+
+# Fingerprint firmware - from jasmine
+etc/firmware/goodixfp.b00:vendor/firmware/goodixfp.b00
+etc/firmware/goodixfp.b01:vendor/firmware/goodixfp.b01
+etc/firmware/goodixfp.b02:vendor/firmware/goodixfp.b02
+etc/firmware/goodixfp.b03:vendor/firmware/goodixfp.b03
+etc/firmware/goodixfp.b04:vendor/firmware/goodixfp.b04
+etc/firmware/goodixfp.b05:vendor/firmware/goodixfp.b05
+etc/firmware/goodixfp.b06:vendor/firmware/goodixfp.b06
+etc/firmware/goodixfp.b07:vendor/firmware/goodixfp.b07
+etc/firmware/goodixfp.mdt:vendor/firmware/goodixfp.mdt
+vendor/firmware/fpctzappfingerprint.b00
+vendor/firmware/fpctzappfingerprint.b01
+vendor/firmware/fpctzappfingerprint.b02
+vendor/firmware/fpctzappfingerprint.b03
+vendor/firmware/fpctzappfingerprint.b04
+vendor/firmware/fpctzappfingerprint.b05
+vendor/firmware/fpctzappfingerprint.b06
+vendor/firmware/fpctzappfingerprint.b07
+vendor/firmware/fpctzappfingerprint.mdt
+
+# Graphics firmware - from jasmine
+vendor/firmware/a512_zap.b00
+vendor/firmware/a512_zap.b01
+vendor/firmware/a512_zap.b02
+vendor/firmware/a512_zap.elf
+vendor/firmware/a512_zap.mdt
+vendor/firmware/a530_pfp.fw
+vendor/firmware/a530_pm4.fw
+vendor/firmware/a540_gpmu.fw2
+
+# Gatekeeper - from jasmine
 vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti
 vendor/lib/hw/android.hardware.gatekeeper@1.0-impl-qti.so
 vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so
 vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc
 
-# Keymaster QTI
+# Keymaster - from jasmine
 vendor/lib64/hw/android.hardware.keymaster@3.0-impl-qti.so
 vendor/lib/hw/android.hardware.keymaster@3.0-impl-qti.so
 vendor/etc/init/android.hardware.keymaster@3.0-service-qti.rc
 vendor/bin/hw/android.hardware.keymaster@3.0-service-qti
+
+# Sensors - from jasmine
+vendor/bin/sensors.qti
+vendor/etc/sensors/hals.conf
+vendor/etc/sensors/sensor_def_qcomdev.conf
+vendor/lib/hw/activity_recognition.sdm660.so
+vendor/lib/libsensor_reg.so
+vendor/lib/libsensor1.so
+vendor/lib/sensors.ssc.so
+vendor/lib64/hw/activity_recognition.sdm660.so
+vendor/lib64/libsensor_reg.so
+vendor/lib64/libsensor1.so
+vendor/lib64/sensors.ssc.so
+
+# Thermal - from jasmine
+vendor/etc/thermal-engine.conf
+vendor/etc/thermal-engine-map.conf
+vendor/etc/thermal-engine-normal.conf
+vendor/etc/thermal-engine-video.conf
+vendor/bin/thermal-engine
+-vendor/lib/libthermalclient.so
+-vendor/lib64/libthermalclient.so
+vendor/lib64/libthermalfeature.so
+vendor/lib64/libthermalioctl.so
+
+# Wifi - from jasmine
+vendor/bin/cnss-daemon
