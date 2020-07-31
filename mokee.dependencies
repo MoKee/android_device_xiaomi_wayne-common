@@ -12,10 +12,6 @@
     "target_path": "vendor/xiaomi/wayne"
   },
   {
-    "repository": "android_kernel_xiaomi_wayne",
-    "target_path": "kernel/xiaomi/wayne"
-  },
-  {
     "repository": "android_vendor_xiaomi_wayne-common",
     "target_path": "vendor/xiaomi/wayne-common"
   },
